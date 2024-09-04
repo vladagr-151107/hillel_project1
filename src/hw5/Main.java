@@ -2,6 +2,7 @@ package hw5;
 
 import java.util.Scanner;
 public class Main{
+
     public static void main(String[] args) {
         double income;
         double incomeWithTaxes;
