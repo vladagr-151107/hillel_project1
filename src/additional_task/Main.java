@@ -7,7 +7,7 @@ public class Main {
         int reversed = 0;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please, enter a number.");
+        System.out.println("Please, enter a number");
         int number = scanner.nextInt();
         while(number !=0){
             int digit = number % 10;
