@@ -15,15 +15,13 @@ public class Main{
         if (income <= 10000) {
             result = income * 0.025;
             incomeWithTaxes = income - result;
-            System.out.printf("Your gross income is %s. The tax is %s", incomeWithTaxes, result);
         } else if (income > 10000 && income <= 25000){
             result = income * 0.043;
             incomeWithTaxes = income - result;
-            System.out.printf("Your gross income is %s. The tax is %s", incomeWithTaxes, result);
         } else{
             result = income * 0.067;
             incomeWithTaxes = income - result;
-            System.out.printf("Your gross income is %s. The tax is %s", incomeWithTaxes, result);
         }
+        System.out.printf("Your gross income is %s. The tax is %s", incomeWithTaxes, result);
     }
 }
