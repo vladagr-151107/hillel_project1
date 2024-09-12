@@ -14,7 +14,6 @@ public class Main {
             System.out.print(numbers[i] + " ");
         }
         System.out.println();
-        //step3
         int sumOfNegatives = 0;
         for(int i = 0; i < numbers.length; i++)
         {
@@ -24,7 +23,6 @@ public class Main {
             }
         }
         System.out.println("Sum of the negative numbers : "+ sumOfNegatives);
-        //step4
         int countEven = 0, countOdd = 0;
         for(int i = 0; i < numbers.length; i++)
         {
@@ -39,7 +37,6 @@ public class Main {
         }
         System.out.println("The number of even numbers : " + countEven);
         System.out.println("The number of odd numbers : " + countOdd);
-        //step5
         int largest = numbers[0];
         int smallest = numbers[0];
         int largestIndex = 0;
@@ -60,7 +57,6 @@ public class Main {
         }
         System.out.println("The largest element : "+ largest+" index : "+ largestIndex);
         System.out.println("The smallest element : "+ smallest + " index : "+ smallestIndex);
-        //step6
         int sumAfterFirstNegative = 0;
         int count = 0;
         for(int i = 0; i < numbers.length; i++)
