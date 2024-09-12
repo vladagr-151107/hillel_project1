@@ -3,20 +3,85 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args){
-        int[] arr = new int[]{20};
-        for(int element:arr){
-            int randomInt = (int) Math.random();
-            Random random = new Random();
-            int nextInt = random.nextInt(-100,100);
-            System.out.println(nextInt);
+        int[] numbers = new int[20];
+        Random random = new Random();
+        for(int i = 0; i < numbers.length; i++)
+        {numbers[i] = random.nextInt(201) - 100;
         }
-       // for(int rand = 0; rand == 20; rand++){
-        //    Random random = new Random();
-       //     int nextInt = random.nextInt(-1000000, 1000000);
-         //   System.out.println(random);
+        System.out.print("Random Array Elements : ");
+        for(int i = 0; i < numbers.length; i++)
+        {
+            System.out.print(numbers[i] + " ");
         }
-        //int randomInt = (int) Math.random();
-        //Random random = new Random();
-        //int nextInt = random.nextInt(-1000000, 1000000);
-        //System.out.println(nextInt); element:arr
+        System.out.println();
+        //step3
+        int sumOfNegatives = 0;
+        for(int i = 0; i < numbers.length; i++)
+        {
+            if(numbers[i]<0)
+            {
+                sumOfNegatives += numbers[i];
+            }
+        }
+        System.out.println("Sum of the negative numbers : "+ sumOfNegatives);
+        //step4
+        int countEven = 0, countOdd = 0;
+        for(int i = 0; i < numbers.length; i++)
+        {
+            if(numbers[i]%2 == 0)
+            {
+                countEven++;
+            }
+            else
+            {
+                countOdd++;
+            }
+        }
+        System.out.println("The number of even numbers : " + countEven);
+        System.out.println("The number of odd numbers : " + countOdd);
+        //step5
+        int largest = numbers[0];
+        int smallest = numbers[0];
+        int largestIndex = 0;
+        int smallestIndex = 0;
+
+        for(int i = 1; i < numbers.length; i++)
+        {
+            if(numbers[i] > largest)
+            {
+                largest = numbers[i];
+                largestIndex = i;
+            }
+            if(numbers[i] < smallest)
+            {
+                smallest = numbers[i];
+                smallestIndex = i;
+            }
+        }
+        System.out.println("The largest element : "+ largest+" index : "+ largestIndex);
+        System.out.println("The smallest element : "+ smallest + " index : "+ smallestIndex);
+        //step6
+        int sumAfterFirstNegative = 0;
+        int count = 0;
+        for(int i = 0; i < numbers.length; i++)
+        {
+            if(numbers[i] < 0)
+            {
+                while(i < numbers.length)
+                {
+                    sumAfterFirstNegative += numbers[i];
+                    count++;
+                    i++;
+                }
+                break;
+
+            }
+        }
+        double average = (double) sumAfterFirstNegative / count;
+        if(count>0)
+        {System.out.println("The mean of the numbers after the first negative number : "+ average);
+        }
+        else {System.out.println("There is no negative number");
+        }
+        }
     }
